@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ffc0cb 0%, #ffb6c1 50%, #ffc0cb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Lilies background animation */
+        .lily {
+            position: absolute;
+            opacity: 0.6;
+            font-size: 4rem;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+        
+        .lily1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .lily2 { top: 20%; right: 15%; animation-delay: 2s; }
+        .lily3 { bottom: 20%; left: 20%; animation-delay: 4s; }
+        .lily4 { bottom: 10%; right: 10%; animation-delay: 1s; }
+        .lily5 { top: 50%; left: 5%; animation-delay: 3s; }
+        .lily6 { top: 30%; right: 5%; animation-delay: 5s; }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 80px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            backdrop-filter: blur(10px);
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: #ff1493;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        button {
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .yes-btn {
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+            color: white;
+        }
+        
+        .yes-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.4);
+        }
+        
+        .no-btn {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+            color: #ff1493;
+        }
+        
+        .no-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="lily lily1">🌸</div>
+    <div class="lily lily2">🌸</div>
+    <div class="lily lily3">🌸</div>
+    <div class="lily lily4">🌸</div>
+    <div class="lily lily5">🌸</div>
+    <div class="lily lily6">🌸</div>
+    
+    <div class="container">
+        <h1>💕 Happy Rose day to u my loveeee 💕</h1>
+        <div class="button-container">
+            <button class="yes-btn" onclick="window.location.href='yes.html'">Yes</button>
+            <button class="no-btn" onclick="window.location.href='no.html'">No</button>
+        </div>
+    </div>
+</body>
+</html>
